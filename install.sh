@@ -1,6 +1,8 @@
 #!/bin/sh
 set -eux
 
+ln -fs $(pwd)/_zshrc ~/.zshrc
+
 cp _gitconfig ~/.gitconfig
 git config --global user.email $1
 
