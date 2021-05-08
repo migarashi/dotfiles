@@ -1,2 +1,8 @@
+[alias]
+	d = diff
+	lg = log --graph --oneline
+	s = status
+[core]
+	quotepath = false
 [user]
 	name = migarashi
