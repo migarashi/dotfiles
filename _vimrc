@@ -1,0 +1,11 @@
+set autoindent
+set expandtab
+set hlsearch
+set ignorecase
+set incsearch
+set number
+set shiftwidth=0
+set smartcase
+set smartindent
+set tabstop=2
+syntax on

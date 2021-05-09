@@ -1,6 +1,7 @@
 #!/bin/sh
 set -eux
 
+ln -fs $(pwd)/_vimrc ~/.vimrc
 ln -fs $(pwd)/_zshrc ~/.zshrc
 
 cp _gitconfig ~/.gitconfig
@@ -12,3 +13,5 @@ curl -LO https://raw.githubusercontent.com/docker/compose/$(docker-compose versi
 
 cd ..
 curl -LO https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+
+defaults write com.apple.screencapture location ~/Downloads
