@@ -8,4 +8,5 @@ brew install \
 cp .gitconfig ~
 git config --global user.email "$1"
 
+ln -fs "$PWD"/.vimrc ~
 ln -fs "$PWD"/.zshrc ~
