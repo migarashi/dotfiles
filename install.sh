@@ -5,6 +5,10 @@ brew install \
   zsh-completions \
   zsh-git-prompt
 
+etc=/Applications/Docker.app/Contents/Resources/etc
+ln -fs $etc/docker-compose.zsh-completion "$(brew --prefix)"/share/zsh-completions/_docker-compose
+ln -fs $etc/docker.zsh-completion "$(brew --prefix)"/share/zsh-completions/_docker
+
 cp .gitconfig ~
 git config --global user.email "$1"
 
