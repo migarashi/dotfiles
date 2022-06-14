@@ -1,3 +1,9 @@
+alias cp='cp -i'
+alias l='ls -G'
+alias la='ls -Ga'
+alias ll='ls -Gl'
+alias mv='mv -i'
+
 FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 autoload -Uz compinit
 compinit -i
