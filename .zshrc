@@ -1,3 +1,4 @@
+# shellcheck disable=SC1091,SC2016,SC2034,SC2148
 alias cp='cp -i'
 alias l='ls -G'
 alias la='ls -Ga'
