@@ -13,7 +13,7 @@ brew install \
   zsh-git-prompt
 
 etc=/Applications/Docker.app/Contents/Resources/etc
-ln -fs $etc/_docker "$(brew --prefix)"/share/zsh-completions/_docker
+ln -fs $etc/_docker "$(brew --prefix)"/share/zsh-completions/
 ln -fs $etc/docker-compose.zsh-completion "$(brew --prefix)"/share/zsh-completions/_docker-compose
 
 cp .gitconfig ~
