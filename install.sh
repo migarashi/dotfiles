@@ -1,6 +1,7 @@
 #!/bin/sh -eu
+# shellcheck disable=SC1090
 
-cp .gitconfig ~
+/bin/cp .gitconfig ~
 git config --global user.email "$1"
 
 defaults write com.apple.screencapture location ~/Downloads
@@ -17,10 +18,11 @@ brew install \
   zsh-completions \
   zsh-git-prompt
 
-cp .zshrc ~
+/bin/cp .zshrc ~
 tfenv install
 tfenv use latest
 terraform -install-autocomplete
+. ~/.zshrc
 
 etc=/Applications/Docker.app/Contents/Resources/etc
 ln -fs $etc/_docker "$(brew --prefix)"/share/zsh-completions/
