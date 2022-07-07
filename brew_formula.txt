@@ -1,0 +1,8 @@
+awscli
+go
+pwgen
+shellcheck
+shfmt
+tfenv
+zsh-completions
+zsh-git-prompt

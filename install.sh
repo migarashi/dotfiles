@@ -9,14 +9,7 @@ defaults write com.apple.screencapture location ~/Downloads
 ln -fs "$PWD"/.vimrc ~
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew install \
-  go \
-  pwgen \
-  shellcheck \
-  shfmt \
-  tfenv \
-  zsh-completions \
-  zsh-git-prompt
+cat < brew_formula.txt | xargs brew install
 
 /bin/cp .zshrc ~
 tfenv install
