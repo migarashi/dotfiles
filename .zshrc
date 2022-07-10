@@ -4,6 +4,7 @@ alias l='ls -G'
 alias la='ls -Ga'
 alias ll='ls -Gl'
 alias mv='mv -i'
+alias shfmt='shfmt -bn -ci -i 2 -sr'
 
 FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 autoload -Uz compinit
