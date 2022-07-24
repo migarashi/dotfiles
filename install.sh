@@ -7,8 +7,8 @@ defaults write com.apple.screencapture location ~/Downloads
 
 ln -fs "$PWD"/.vimrc ~
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-cat < brew_formula.txt | xargs brew install
+bash -c "$(curl -LSfs https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+xargs brew install < brew_formula.txt
 
 cp .zshrc ~
 tfenv install
