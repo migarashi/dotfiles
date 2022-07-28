@@ -1,0 +1,8 @@
+brew "awscli"
+brew "go"
+brew "pwgen"
+brew "shellcheck"
+brew "shfmt"
+brew "tfenv"
+brew "zsh-completions"
+brew "zsh-git-prompt"
