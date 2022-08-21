@@ -5,17 +5,14 @@ enable_completion() {
   ln -fs "$1" "$(brew --prefix)"/share/zsh-completions/"$2"
 }
 
-cp .gitconfig ~
+cp .gitconfig .vimrc .zshrc ~
 git config --global user.email "$1"
 
 defaults write com.apple.screencapture location ~/Downloads
 
-ln -fs "$PWD"/.vimrc ~
-
 bash -c "$(curl -LSfs https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew bundle --no-lock
 
-cp .zshrc ~
 tfenv install
 tfenv use latest
 terraform -install-autocomplete
