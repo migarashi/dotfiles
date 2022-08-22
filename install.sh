@@ -5,10 +5,10 @@ enable_completion() {
   ln -fs "$1" "$(brew --prefix)"/share/zsh-completions/"$2"
 }
 
+defaults write com.apple.screencapture location ~/Downloads
+
 cp .gitconfig .vimrc .zshrc ~
 git config --global user.email "$1"
-
-defaults write com.apple.screencapture location ~/Downloads
 
 bash -c "$(curl -LSfs https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew bundle --no-lock
