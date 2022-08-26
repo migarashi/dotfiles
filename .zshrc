@@ -7,7 +7,7 @@ alias mv='mv -i'
 alias python='python3'
 alias shfmt='shfmt -bn -ci -i 2 -sr'
 
-FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+FPATH=~/.zsh/completion:$FPATH
 autoload -Uz compinit
 compinit -i
 

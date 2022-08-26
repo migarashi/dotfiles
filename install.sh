@@ -2,10 +2,16 @@
 
 enable_completion() {
   ls "$1" > /dev/null
-  ln -fs "$1" "$(brew --prefix)"/share/zsh-completions/"$2"
+  ln -fs "$1" "$2"
 }
 
 defaults write com.apple.screencapture location ~/Downloads
+
+dst_path=~/.zsh/completion
+src_path=/Applications/Docker.app/Contents/Resources/etc
+mkdir -p $dst_path
+enable_completion $src_path/docker-compose.zsh-completion $dst_path/_docker-compose
+enable_completion $src_path/docker.zsh-completion $dst_path/_docker
 
 cp .gitconfig .vimrc .zshrc ~
 git config --global user.email "$1"
@@ -16,9 +22,5 @@ brew bundle --no-lock
 tfenv install
 tfenv use latest
 terraform -install-autocomplete
-
-path=/Applications/Docker.app/Contents/Resources/etc
-enable_completion $path/docker-compose.zsh-completion _docker-compose
-enable_completion $path/docker.zsh-completion _docker
 
 echo done!
