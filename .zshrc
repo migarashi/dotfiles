@@ -3,8 +3,7 @@
 PROMPT='%B%m%~%b$(git_super_status) %# '
 
 FPATH=~/.zsh/completion:$FPATH
-autoload -Uz compinit
-compinit -i
+autoload -Uz compinit && compinit -i
 
 alias cp='cp -i'
 alias l='ls -G'

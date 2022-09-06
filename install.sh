@@ -13,11 +13,11 @@ mkdir -p $dst_path
 enable_completion $src_path/docker-compose.zsh-completion $dst_path/_docker-compose
 enable_completion $src_path/docker.zsh-completion $dst_path/_docker
 
-cp .gitconfig .vimrc .zshrc ~
-git config --global user.email "$1"
-
 bash -c "$(curl -LSfs https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew bundle --no-lock
+
+cp .gitconfig .vimrc .zshrc ~
+git config --global user.email "$1"
 
 tfenv install
 tfenv use latest

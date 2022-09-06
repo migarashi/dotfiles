@@ -1,5 +1,6 @@
 brew "awscli"
 brew "go"
+brew "jq"
 brew "pwgen"
 brew "shellcheck"
 brew "shfmt"
