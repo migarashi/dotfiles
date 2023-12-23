@@ -6,6 +6,7 @@ FPATH=~/.zsh/completion:$FPATH
 autoload -Uz compinit && compinit -i
 
 alias cp='cp -i'
+alias grep='grep --color=auto'
 alias l='ls -G'
 alias la='ls -Ga'
 alias ll='ls -Gl'
