@@ -2,6 +2,7 @@
 
 brew bundle --no-lock
 cp .vimrc .zshrc ~
+cp settings.json ~/Library/Application\ Support/Code/User/
 defaults write com.apple.screencapture location ~/Downloads
 git config --global core.quotepath false
 git config --global url.git@github.com:.insteadOf https://github.com/
